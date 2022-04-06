@@ -1,0 +1,14 @@
+<div class="countries" *ngIf="!detailsOpen">
+  <app-country
+    *ngFor="let country of filteredArray"
+    [country]="country"
+    (sendCountry)="recieveCountry($event)"
+  ></app-country>
+</div>
+<app-country-detail
+  *ngIf="detailsOpen"
+  [countryDetails]="recievedCountry"
+  [countryCodes]="countryCodes"
+  (close)="closeDetails()"
+  (sendBorderCountry)="onBorderCountryClicked($event)"
+></app-country-detail>

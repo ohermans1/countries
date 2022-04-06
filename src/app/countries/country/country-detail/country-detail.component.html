@@ -1,0 +1,86 @@
+<div class="country-detail">
+  <button class="country-detail__back" (click)="closeDetails()">
+    <span class="country-detail__back--arrow">&larr; </span> Back
+  </button>
+  <div class="country-detail__content">
+    <img
+      src="{{ this.countryDetails[0].flag }}"
+      alt="{{this.countryDetails[0].name} Flag"
+      class="country-detail__img"
+    />
+    <div class="country-detail__text">
+      <h2 class="country-detail__name">{{ this.countryDetails[0].name }}</h2>
+      <div class="country-detail__stats">
+        <p class="country-detail__paragraph">
+          <span
+            class="country-detail__paragraph country-detail__paragraph--bold"
+            >Native Name:
+          </span>
+          {{ this.countryDetails[0].nativeName }}
+        </p>
+        <p class="country-detail__paragraph">
+          <span
+            class="country-detail__paragraph country-detail__paragraph--bold"
+            >Population:
+          </span>
+          {{ this.countryDetails[0].population }}
+        </p>
+        <p class="country-detail__paragraph">
+          <span
+            class="country-detail__paragraph country-detail__paragraph--bold"
+            >Region:
+          </span>
+          {{ this.countryDetails[0].region }}
+        </p>
+        <p class="country-detail__paragraph">
+          <span
+            class="country-detail__paragraph country-detail__paragraph--bold"
+            >Sub Region:
+          </span>
+          {{ this.countryDetails[0].subRegion }}
+        </p>
+        <p class="country-detail__paragraph">
+          <span
+            class="country-detail__paragraph country-detail__paragraph--bold"
+            >Capital:
+          </span>
+          {{ this.countryDetails[0].capital }}
+        </p>
+        <p class="country-detail__paragraph">
+          <span
+            class="country-detail__paragraph country-detail__paragraph--bold"
+            >Top Level Domain:
+          </span>
+          {{ this.countryDetails[0].domain }}
+        </p>
+        <p class="country-detail__paragraph">
+          <span
+            class="country-detail__paragraph country-detail__paragraph--bold"
+            >Currencies:
+          </span>
+          {{ this.countryDetails[0].currencies }}
+        </p>
+        <p class="country-detail__paragraph">
+          <span
+            class="country-detail__paragraph country-detail__paragraph--bold"
+            >Languages:
+          </span>
+          {{ this.countryDetails[0].languages }}
+        </p>
+      </div>
+      <div class="country-detail__border" *ngIf="hasBorderCountries">
+        <span class="country-detail__paragraph country-detail__paragraph--bold"
+          >Border Countries:
+        </span>
+        <button
+          class="country-detail__border-country"
+          *ngFor="let border of fullNameBorderCountries"
+          value="{{ border }}"
+          (click)="onBorderClick($event)"
+        >
+          {{ border }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

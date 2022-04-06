@@ -1,0 +1,41 @@
+.country {
+  background-color: var(--color-el);
+  box-shadow: var(--style-box-shadow-light);
+  border-radius: var(--style-border-radius);
+
+  position: relative;
+
+  &__name {
+    margin-bottom: 1.2rem;
+    max-width: 20rem;
+  }
+
+  &__text {
+    padding: 2rem;
+    font-size: 1.3rem;
+    color: var(--color-txt);
+    max-width: 20rem;
+  }
+
+  &__flag {
+    height: 18rem;
+    width: 100%;
+  }
+
+  &__details {
+    margin-bottom: 0.7rem;
+    &--bold {
+      font-weight: 800;
+    }
+  }
+
+  &__button {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+  }
+}

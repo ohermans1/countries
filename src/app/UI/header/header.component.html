@@ -1,0 +1,19 @@
+<header class="header">
+  <h1 class="header__title">Where in the world?</h1>
+  <div
+    class="header__toggle-group"
+    (click)="toggleDarkLight()"
+    *ngIf="!darkMode"
+  >
+    <mat-icon class="header__icon">dark_mode</mat-icon>
+    <p class="header__toggle-text">Dark Mode</p>
+  </div>
+  <div
+    class="header__toggle-group"
+    (click)="toggleDarkLight()"
+    *ngIf="darkMode"
+  >
+    <mat-icon class="header__icon">light_mode</mat-icon>
+    <p class="header__toggle-text">Light Mode</p>
+  </div>
+</header>

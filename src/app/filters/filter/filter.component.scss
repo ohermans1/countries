@@ -1,0 +1,42 @@
+.filter {
+  box-shadow: var(--style-box-shadow-dark);
+  padding: 1.5rem;
+  width: 20rem;
+  background-color: var(--color-el);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  border-radius: var(--style-border-radius);
+
+  
+
+  &__input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__option-group {
+    position: absolute;
+    list-style: none;
+    bottom: -20.5rem;
+    box-shadow: var(--style-box-shadow-dark);
+    padding: 1.5rem;
+    width: 20rem;
+    background-color: var(--color-el);
+    left: 0;
+    border-radius: var(--style-border-radius);
+    line-height: 2.8rem;
+    z-index: 10;
+  }
+
+  &__option {
+    &:hover {
+      color: var(--color-input);
+    }
+  }
+}

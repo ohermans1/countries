@@ -1,0 +1,22 @@
+<div class="filter filterToggle">
+  <div class="filter__input filterToggle">
+    {{ selectedRegion }}
+    <mat-icon
+      class="filter__icon filterToggle"
+      *ngIf="!menuOpen; else menuClosed"
+      >expand_more</mat-icon
+    ><ng-template #menuClosed
+      ><mat-icon class="filter__icon filterToggle"
+        >expand_less</mat-icon
+      ></ng-template
+    >
+    <ul class="filter__option-group" *ngIf="menuOpen">
+      <li class="filter__option" (click)="selectOption($event)">All</li>
+      <li class="filter__option" (click)="selectOption($event)">Africa</li>
+      <li class="filter__option" (click)="selectOption($event)">Americas</li>
+      <li class="filter__option" (click)="selectOption($event)">Asia</li>
+      <li class="filter__option" (click)="selectOption($event)">Europe</li>
+      <li class="filter__option" (click)="selectOption($event)">Oceania</li>
+    </ul>
+  </div>
+</div>

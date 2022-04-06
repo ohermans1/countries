@@ -1,0 +1,29 @@
+.search {
+  box-shadow: var(--style-box-shadow-dark);
+  padding: 1.5rem;
+  width: 40rem;
+  background-color: var(--color-el);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: var(--style-border-radius);
+  font-size: 1.4rem;
+  &__icon {
+  }
+  &__input {
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--color-el);
+    color: var(--color-txt);
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      font-size: 1.4rem;
+      color: var(--color-txt);
+    }
+  }
+}

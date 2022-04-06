@@ -1,0 +1,25 @@
+<div class="country">
+  <button
+    class="country__button"
+    value="{{ country.name }}"
+    (click)="openDetails($event)"
+  ></button>
+  <img
+    src="{{ country.flag }}"
+    alt="{{ country.name }} + ' Flag'"
+    class="country__flag"
+  />
+  <div class="country__text">
+    <h2 class="country__name">{{ country.name }}</h2>
+    <p class="country__details">
+      <span class="country__details--bold">Population: </span
+      >{{ country.population }}
+    </p>
+    <p class="country__details">
+      <span class="country__details--bold">Region: </span>{{ country.region }}
+    </p>
+    <p class="country__details">
+      <span class="country__details--bold">Capital: </span>{{ country.capital }}
+    </p>
+  </div>
+</div>

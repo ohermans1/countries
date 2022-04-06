@@ -1,0 +1,9 @@
+.countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, max-content));
+  gap: 5rem;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 100%;
+  }
+}

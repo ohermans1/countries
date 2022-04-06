@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+:root {
+  --color-el: hsl(0, 0%, 100%);
+  --color-bg: hsl(0, 0%, 98%);
+  --color-txt: hsl(200, 15%, 8%);
+  --color-input: hsl(0, 0%, 52%);
+
+  --style-box-shadow-light: 0px 2px 7px rgba(78, 78, 78, 0.05);
+  --style-box-shadow-dark: 0px 2px 7px rgba(78, 78, 78, 0.2);
+  --style-border-radius: 7px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media screen and (max-width: 500px) {
+    font-size: 55%;
+  }
+
+  @media screen and (max-width: 370px) {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-txt);
+}
